@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/can-i-call-clock/static/css/main.989655df.css",
+    "main.js": "/can-i-call-clock/static/js/main.0a49ea91.js",
+    "static/js/787.60b10a37.chunk.js": "/can-i-call-clock/static/js/787.60b10a37.chunk.js",
+    "index.html": "/can-i-call-clock/index.html",
+    "main.989655df.css.map": "/can-i-call-clock/static/css/main.989655df.css.map",
+    "main.0a49ea91.js.map": "/can-i-call-clock/static/js/main.0a49ea91.js.map",
+    "787.60b10a37.chunk.js.map": "/can-i-call-clock/static/js/787.60b10a37.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.989655df.css",
+    "static/js/main.0a49ea91.js"
+  ]
+}

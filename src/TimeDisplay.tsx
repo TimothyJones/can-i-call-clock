@@ -8,14 +8,20 @@ export const TimeDisplay = ({
 }: {
   timezone: string;
   now: DateTime;
-  city?: string;
+  city?: string | Array<string>;
 }) => {
   const { time, inferredCity, displayTimezone, timeOfDay, timeToNine } =
     useTimeFormats(timezone, now);
   return (
     <div className={`TimeBlock ${timeOfDay}`}>
       <div className="TimeBlockSegment">
-        <div className="City">{city !== undefined ? city : inferredCity}</div>
+        <div className="City">
+          {city !== undefined
+            ? Array.isArray(city)
+              ? city.map((name) => <div className="multi-city">{name}</div>)
+              : city
+            : inferredCity}
+        </div>
         {timeOfDay === 'lateEvening' || timeOfDay === 'night' ? (
           'Asleep'
         ) : (

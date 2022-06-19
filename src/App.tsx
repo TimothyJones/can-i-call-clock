@@ -10,7 +10,7 @@ function App() {
       <TimeDisplay
         now={now}
         timezone="America/Los_Angeles"
-        city="San Francisco"
+        city={['San Francisco', 'Vancouver']}
       />
       <TimeDisplay now={now} timezone="America/Toronto" city="Montréal" />
       <TimeDisplay now={now} timezone="Australia/Melbourne" />

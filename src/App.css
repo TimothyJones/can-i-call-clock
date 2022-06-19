@@ -43,6 +43,7 @@
 .TimeBlockSegment {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .Time {
@@ -57,6 +58,10 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.multi-city {
+  font-size: 0.8em;
 }
 
 .version {

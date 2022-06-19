@@ -19,5 +19,5 @@ export const timeOfDayString = (now: DateTime): TimeOfDay => {
 
 export const cityFromTimezoneString = (timezone: string) => {
   const split = timezone.split('/');
-  return split.length === 2 ? split[1] : 'Unknown City';
+  return split.length === 2 ? split[1].replaceAll('_', ' ') : 'Unknown City';
 };

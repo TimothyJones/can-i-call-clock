@@ -23,7 +23,7 @@
     "build": "REACT_APP_VERSION=$(npx absolute-version) react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "predeploy": "commit-and-tag-version && npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -48,6 +48,7 @@
     "@pact-foundation/pact-js-prettier-config": "^1.0.0",
     "@types/luxon": "^2.3.2",
     "absolute-version": "^1.0.1",
+    "commit-and-tag-version": "^10.0.1",
     "gh-pages": "^4.0.0",
     "prettier": "^2.7.1"
   },

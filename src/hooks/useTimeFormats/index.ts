@@ -17,7 +17,7 @@ export const useTimeFormats = (timezone: string, localNow: DateTime) => {
   }, [timezone]);
 
   return {
-    city,
+    inferredCity: city,
     displayTimezone,
     ...useMemo(() => {
       const now = localNow.setZone(zone);

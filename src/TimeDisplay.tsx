@@ -4,18 +4,18 @@ import { useTimeFormats } from './hooks/useTimeFormats';
 export const TimeDisplay = ({
   timezone,
   now,
+  city,
 }: {
   timezone: string;
   now: DateTime;
+  city?: string;
 }) => {
-  const { time, city, displayTimezone, timeOfDay, timeToNine } = useTimeFormats(
-    timezone,
-    now
-  );
+  const { time, inferredCity, displayTimezone, timeOfDay, timeToNine } =
+    useTimeFormats(timezone, now);
   return (
     <div className={`TimeBlock ${timeOfDay}`}>
       <div className="TimeBlockSegment">
-        <div className="City">{city}</div>
+        <div className="City">{city !== undefined ? city : inferredCity}</div>
         {timeOfDay === 'lateEvening' || timeOfDay === 'night' ? (
           'Asleep'
         ) : (

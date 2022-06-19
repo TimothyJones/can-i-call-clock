@@ -1,6 +1,6 @@
 {
   "name": "can-i-call-clock",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Timothy Jones <timothy.l.jones@gmail.com>",
   "private": true,
   "dependencies": {
@@ -50,6 +50,6 @@
     "gh-pages": "^4.0.0",
     "prettier": "^2.7.1"
   },
-  "homepage": "https://timothyjones.github.io/can-i-call-clock", 
-  "license" : "BSD-3-Clause"
+  "homepage": "https://timothyjones.github.io/can-i-call-clock",
+  "license": "BSD-3-Clause"
 }

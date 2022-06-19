@@ -7,8 +7,14 @@ function App() {
   const { now } = useNow();
   return (
     <div className="App">
+      <TimeDisplay
+        now={now}
+        timezone="America/Los_Angeles"
+        city="San Francisco"
+      />
+      <TimeDisplay now={now} timezone="America/Toronto" city="Montréal" />
       <TimeDisplay now={now} timezone="Australia/Melbourne" />
-      <TimeDisplay now={now} timezone="America/Montreal" />
+      <TimeDisplay now={now} timezone="Pacific/Auckland" city="Wellington" />
     </div>
   );
 }

@@ -1,65 +1,8 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import './App.css';
-import { useNow } from './useNow';
-import { DateTime, Info } from 'luxon';
-
-const cityFromTimezoneString = (timezone: string) => {
-  const split = timezone.split('/');
-  return split.length === 2 ? split[1] : 'Unknown City';
-};
-
-type TimeOfDay = 'lateEvening' | 'earlyEvening' | 'work' | 'morning' | 'night';
-
-const timeOfDayString = (now: DateTime): TimeOfDay => {
-  if (now.hour >= 22) {
-    return 'lateEvening';
-  }
-  if (now.hour >= 18) {
-    return 'earlyEvening';
-  }
-  if (now.hour >= 9) {
-    return 'work';
-  }
-  if (now.hour >= 7) {
-    return 'morning';
-  }
-  return 'night';
-};
-
-const nextNine = (now: DateTime) => {
-  const candidateNine = now.set({ hour: 9, minute: 0, second: 0 });
-  return candidateNine < now ? candidateNine.plus({ day: 1 }) : candidateNine;
-};
-
-const useTimeFormats = (timezone: string, localNow: DateTime) => {
-  const { zone, city, displayTimezone } = useMemo(() => {
-    const zone = Info.normalizeZone(timezone);
-
-    return {
-      zone,
-      city: cityFromTimezoneString(timezone),
-      displayTimezone: zone.isValid
-        ? zone.offsetName(DateTime.now().toMillis(), { format: 'long' })
-        : 'Invalid timezone',
-    };
-  }, [timezone]);
-
-  return {
-    city,
-    displayTimezone,
-    ...useMemo(() => {
-      const now = localNow.setZone(zone);
-
-      const diff = nextNine(now).diff(now, ['hours', 'minutes', 'seconds']);
-
-      return {
-        timeToNine: diff,
-        timeOfDay: timeOfDayString(now),
-        time: now.toLocaleString(DateTime.TIME_WITH_SECONDS),
-      };
-    }, [localNow, zone]),
-  };
-};
+import { useNow } from './hooks/useNow';
+import { DateTime } from 'luxon';
+import { useTimeFormats } from './hooks/useTimeFormats';
 
 const TimeDisplay = ({
   timezone,
@@ -74,7 +17,7 @@ const TimeDisplay = ({
   );
   return (
     <div className={`TimeBlock ${timeOfDay}`}>
-      <div className="TimeBlockTop">
+      <div className="TimeBlockSegment">
         <div className="City">{city}</div>
         {timeOfDay === 'lateEvening' || timeOfDay === 'night' ? (
           'Asleep'
@@ -83,7 +26,7 @@ const TimeDisplay = ({
         )}
       </div>
 
-      <div className="TimeBlockTop">
+      <div className="TimeBlockSegment">
         <div className="Timezone">{displayTimezone}</div>
         {timeOfDay === 'lateEvening' || timeOfDay === 'night' ? (
           <div className="Timezone">

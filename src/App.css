@@ -40,7 +40,7 @@
   width: 50vw;
 }
 
-.TimeBlockTop {
+.TimeBlockSegment {
   display: flex;
   justify-content: space-between;
 }

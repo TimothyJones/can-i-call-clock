@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [0.1.3](https://github.com/TimothyJones/can-i-call-clock/compare/v0.1.2...v0.1.3) (2022-06-19)
+
+
+### Features
+
+* Allow multi-city legends ([25500d5](https://github.com/TimothyJones/can-i-call-clock/commit/25500d54ec9319bec177b8b2b2af8dbfc358238b))
+
 ### [0.1.2](https://github.com/TimothyJones/can-i-call-clock/compare/v0.1.1...v0.1.2) (2022-06-19)
 
 

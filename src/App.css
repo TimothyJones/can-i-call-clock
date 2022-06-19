@@ -58,3 +58,10 @@
 .App-link {
   color: #61dafb;
 }
+
+.version {
+  color: dimgray;
+  align-self: center;
+  text-align: center;
+  font-size: 0.3em;
+}

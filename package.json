@@ -19,8 +19,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "REACT_APP_VERSION=$(npx absolute-version) react-scripts start",
+    "build": "REACT_APP_VERSION=$(npx absolute-version) react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
@@ -47,6 +47,7 @@
   "devDependencies": {
     "@pact-foundation/pact-js-prettier-config": "^1.0.0",
     "@types/luxon": "^2.3.2",
+    "absolute-version": "^1.0.1",
     "gh-pages": "^4.0.0",
     "prettier": "^2.7.1"
   },

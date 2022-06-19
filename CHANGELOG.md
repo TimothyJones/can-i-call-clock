@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [0.1.2](https://github.com/TimothyJones/can-i-call-clock/compare/v0.1.1...v0.1.2) (2022-06-19)
+
+
+### Features
+
+* Display version information ([d7a218b](https://github.com/TimothyJones/can-i-call-clock/commit/d7a218b6a7cf2901097fba29061ab0aa7568a8d9))
+
+
+### Bug Fixes
+
+* Correct favicon, description and page titles ([75af975](https://github.com/TimothyJones/can-i-call-clock/commit/75af975aaa70a9feb4396141774dcabed9227c5c))
+
 ### 0.1.1 (2022-06-19)
 
 

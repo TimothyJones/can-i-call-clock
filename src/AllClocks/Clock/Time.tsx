@@ -7,4 +7,4 @@ export const Time = ({
   timeOfDay: TimeOfDay;
   time: string;
 }) =>
-  timeOfDay === 'night' ? <>Asleep</> : <div className="Time">{time}</div>;
+  timeOfDay === 'night' ? <>Sleeping</> : <div className="Time">{time}</div>;

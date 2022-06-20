@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [0.1.4](https://github.com/TimothyJones/can-i-call-clock/compare/v0.1.3...v0.1.4) (2022-06-20)
+
+
+### Features
+
+* Significantly improve mobile view ([3f8e039](https://github.com/TimothyJones/can-i-call-clock/commit/3f8e0390b75325ba4933f1efb61ec7200505d892))
+
 ### [0.1.3](https://github.com/TimothyJones/can-i-call-clock/compare/v0.1.2...v0.1.3) (2022-06-19)
 
 

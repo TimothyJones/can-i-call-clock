@@ -1,6 +1,6 @@
 {
   "name": "can-i-call-clock",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": "Timothy Jones <timothy.l.jones@gmail.com>",
   "private": true,
   "dependencies": {

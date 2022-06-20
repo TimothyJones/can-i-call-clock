@@ -2,7 +2,7 @@ import React from 'react';
 import { DateTime } from 'luxon';
 
 export const useNow = () => {
-  const [now, setNow] = React.useState(DateTime.now()); // Save the current date to be able to trigger an update
+  const [now, setNow] = React.useState(DateTime.now());
 
   React.useEffect(() => {
     const timer = setInterval(() => {
@@ -14,6 +14,6 @@ export const useNow = () => {
   }, []);
 
   return {
-    now: now,
+    now,
   };
 };

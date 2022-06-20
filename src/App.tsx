@@ -1,6 +1,9 @@
 import React from 'react';
+import replaceAllInserter from 'string.prototype.replaceall';
 import './App.css';
 import { AllClocks } from './AllClocks';
+
+replaceAllInserter.shim();
 
 function App() {
   return (

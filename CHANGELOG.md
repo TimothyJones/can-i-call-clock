@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [1.0.1](https://github.com/TimothyJones/can-i-call-clock/compare/v1.0.0...v1.0.1) (2022-06-20)
+
+
+### Bug Fixes
+
+* Add missing key property to cities ([bcfb6fb](https://github.com/TimothyJones/can-i-call-clock/commit/bcfb6fb5ba529d4a0568b84105e8ad39e546fd23))
+
 ## [1.0.0](https://github.com/TimothyJones/can-i-call-clock/compare/v0.1.5...v1.0.0) (2022-06-20)
 
 * No changes, just releasing 1.0.0

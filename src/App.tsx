@@ -7,14 +7,16 @@ function App() {
   const { now } = useNow();
   return (
     <div className="App">
-      <TimeDisplay
-        now={now}
-        timezone="America/Los_Angeles"
-        city={['San Francisco', 'Vancouver']}
-      />
-      <TimeDisplay now={now} timezone="America/Toronto" city="Montréal" />
-      <TimeDisplay now={now} timezone="Australia/Melbourne" />
-      <TimeDisplay now={now} timezone="Pacific/Auckland" city="Wellington" />
+      <div className="AllClocks">
+        <TimeDisplay
+          now={now}
+          timezone="America/Los_Angeles"
+          city={['San Francisco', 'Vancouver']}
+        />
+        <TimeDisplay now={now} timezone="America/Toronto" city="Montréal" />
+        <TimeDisplay now={now} timezone="Australia/Melbourne" />
+        <TimeDisplay now={now} timezone="Pacific/Auckland" city="Wellington" />
+      </div>
       <div className="version">v{process.env.REACT_APP_VERSION}</div>
     </div>
   );

@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [0.1.5](https://github.com/TimothyJones/can-i-call-clock/compare/v0.1.4...v0.1.5) (2022-06-20)
+
+
+### Bug Fixes
+
+* Change text from 'Asleep' to 'Sleeping' ([e30d3ed](https://github.com/TimothyJones/can-i-call-clock/commit/e30d3ed063f77f45c253b022d9f7d628e1ad9323))
+* Move sleep time to 11pm, move late evening to from 9pm ([431964d](https://github.com/TimothyJones/can-i-call-clock/commit/431964ddd92ee4fabe4058f41618cfea339c3af3))
+* Use shim for replaceAll ([3776849](https://github.com/TimothyJones/can-i-call-clock/commit/3776849c5a516f954a371efcfdf6a6430a4546ef))
+
 ### [0.1.4](https://github.com/TimothyJones/can-i-call-clock/compare/v0.1.3...v0.1.4) (2022-06-20)
 
 

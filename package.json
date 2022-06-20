@@ -25,7 +25,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "commit-and-tag-version && npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "postdeploy": "git push --follow-tags"
   },
   "eslintConfig": {
     "extends": [

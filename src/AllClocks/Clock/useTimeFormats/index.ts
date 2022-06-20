@@ -2,14 +2,26 @@ import { DateTime, Info } from 'luxon';
 import { useMemo } from 'react';
 import { nextTimeOfHour } from './dateMath';
 import { cityFromTimezoneString, timeOfDayString } from './formatters';
+import { TimeOfDay, TimeUntil } from './types';
 
-export const useTimeFormats = (timezone: string, localNow: DateTime) => {
-  const { zone, city, displayTimezone } = useMemo(() => {
+interface TimeFormats {
+  inferredCity: string;
+  displayTimezone: string;
+  timeUntilWake: TimeUntil;
+  timeOfDay: TimeOfDay;
+  time: string;
+}
+
+export const useTimeFormats = (
+  timezone: string,
+  localNow: DateTime
+): TimeFormats => {
+  const { zone, inferredCity, displayTimezone } = useMemo(() => {
     const zone = Info.normalizeZone(timezone);
 
     return {
       zone,
-      city: cityFromTimezoneString(timezone),
+      inferredCity: cityFromTimezoneString(timezone),
       displayTimezone: zone.isValid
         ? zone.offsetName(DateTime.now().toMillis(), { format: 'long' })
         : 'Invalid timezone',
@@ -17,13 +29,13 @@ export const useTimeFormats = (timezone: string, localNow: DateTime) => {
   }, [timezone]);
 
   return {
-    inferredCity: city,
+    inferredCity,
     displayTimezone,
     ...useMemo(() => {
       const now = localNow.setZone(zone);
 
       return {
-        timeToNine: nextTimeOfHour(now, 9).diff(now, [
+        timeUntilWake: nextTimeOfHour(now, 9).diff(now, [
           'hours',
           'minutes',
           'seconds',

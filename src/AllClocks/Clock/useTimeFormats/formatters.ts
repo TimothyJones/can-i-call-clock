@@ -1,5 +1,5 @@
 import { DateTime } from 'luxon';
-import { TimeOfDay } from '../../types';
+import { TimeOfDay } from './types';
 
 export const timeOfDayString = (now: DateTime): TimeOfDay => {
   if (now.hour >= 23) {
@@ -20,7 +20,7 @@ export const timeOfDayString = (now: DateTime): TimeOfDay => {
   return 'night';
 };
 
-export const cityFromTimezoneString = (timezone: string) => {
+export const cityFromTimezoneString = (timezone: string): string => {
   const split = timezone.split('/');
   return split.length === 2 ? split[1].replaceAll('_', ' ') : 'Unknown City';
 };

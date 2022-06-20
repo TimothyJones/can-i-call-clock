@@ -22,16 +22,12 @@ export const TimeDisplay = ({
               : city
             : inferredCity}
         </div>
-        {timeOfDay === 'lateEvening' || timeOfDay === 'night' ? (
-          'Asleep'
-        ) : (
-          <div className="Time">{time}</div>
-        )}
+        {timeOfDay === 'night' ? 'Asleep' : <div className="Time">{time}</div>}
       </div>
 
       <div className="TimeBlockSegment">
         <div className="Timezone">{displayTimezone}</div>
-        {timeOfDay === 'lateEvening' || timeOfDay === 'night' ? (
+        {timeOfDay === 'night' ? (
           <div className="Timezone">
             Awake in <span className="Time">{timeToNine.hours}</span> hr{' '}
             <span className="Time">{timeToNine.minutes}</span> min and{' '}

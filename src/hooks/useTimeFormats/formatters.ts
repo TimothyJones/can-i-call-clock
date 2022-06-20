@@ -2,7 +2,10 @@ import { DateTime } from 'luxon';
 import { TimeOfDay } from '../../types';
 
 export const timeOfDayString = (now: DateTime): TimeOfDay => {
-  if (now.hour >= 22) {
+  if (now.hour >= 23) {
+    return 'night';
+  }
+  if (now.hour >= 21) {
     return 'lateEvening';
   }
   if (now.hour >= 18) {
